@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;700&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | NFT preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -17,23 +18,84 @@
       padding: 0;
       box-sizing: border-box;
     }
+    html {
+      font-size: 62.5%;
+    }
     body{
-      background-color: hsl(217, 54%, 11%);
+      background-color: hsl(216, 54%, 11%);
+
+      font-size: 1.5rem;
+      font-family: 'Outfit', sans-serif;
+      position: relative;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nft {
+      background-color: hsl(216, 50%, 16%);
+      border-radius: 3%;
+
+      display: flex;
+      flex-direction: column;
+
+      width: min-content;
+      padding: 1%;
+
+      color: hsl(215, 51%, 70%);
+    }
+
+    .nft > * {
+      margin-bottom: 1.5rem;
+    }
+
+    .img {
+      width: 25rem;
+      border-radius: 3%;
+    }
+
+    .title {
+      font-weight: 700;
+      color: hsl(0, 0%, 100%);
+      font-size: 2rem;
+    }
+
+    .desc {
+      font-weight: 200;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    hr {
+      border: solid 0.5px hsl(215, 32%, 27%);
     }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-
-  <div class="nft">
-    <img src="./images/image-equilibrium.jpg" alt="" class="img">
-    <div class="title">Equilibrium #3429</div>
-    <div class="desc">Our Equilibrium collection promotes balance and calm.</div>
-    <div class="value">0.041 ETH</div>
-    <div class="duration">3 days left</div>
-    <div class="creator">Creation of Jules Wyvern</div>
+  <div class="container">
+    <div class="nft">
+      <img src="./images/image-equilibrium.jpg" alt="" class="img">
+      <div class="title">Equilibrium #3429</div>
+      <div class="desc">Our Equilibrium collection promotes balance and calm.</div>
+      <div class="details">
+        <div class="value">0.041 ETH</div>
+        <div class="duration">3 days left</div>
+      </div>
+      <hr>
+      <div class="creator">Creation of Jules Wyvern</div>
+    </div>
   </div>
+
+  
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
